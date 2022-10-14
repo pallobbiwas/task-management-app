@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+h1 {
+  background-color: aquamarine;
+  text-align: center;
+  padding: 8px 40px;
+  margin-bottom: 20px;
+}
+.main-container {
+  padding: 20px 55px;
+}
+.user-box {
+  background-color: rgb(211, 211, 211);
+  padding: 80px 20px;
+  margin-top: 40px;
+  border-radius: 4px;
+}
+.btn {
+  background: green;
+  color: white;
+  padding: 5px 15px;
+  margin-top: 10px;
+}
+.defult-bg {
+  background-color: aliceblue;
+  box-shadow: -3px -1px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -3px -1px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -3px -1px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.login-container {
+  width: 400px;
+}
+.main-login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.px {
+  padding: 0px 20px;
+}
+.py {
+  padding: 20px 0;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.bg-header{
+  background-color: rgb(65, 75, 71);
+  border-radius: 5px;
+  padding: 8px 2px;
+  color: aliceblue;
+}
+.rmain{
+  color: rgb(207, 0, 0);
+  font-weight: bolder;
+}
+.change-container{
+  background-color: darkgray;
+  border-radius: 5px;
+}
+.change-container-header{
+  background-color: bisque;
+  padding: 15px 2px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+.stageinfo{
+  background-color: rgb(150, 160, 5);
+  padding-left:5px ;
+}
+.stage-name{
+  color: rgb(255, 124, 124);
+  background-color: rgb(47, 75, 17);
+  width: 100%;
+  padding: 3px 20px;
+  border-radius: 10px 0 10px 0;
+}
+.stage-valu{
+  color: aqua;
+  background-color: rgb(27, 44, 10);
+  width: 100%;
+  padding: 3px 20px;
+  border-radius: 10px 0 10px 0;
+}
+.time-head{
+  background-color: rgb(17, 11, 12);
+  padding: 4px 10px;
+  color: rgb(9, 184, 190);
+}
+.edit-header{
+  font-weight: bolder;
+  color: rgb(128, 2, 65);
+}
+.edit-content{
+  background-color: bisque;
+  padding: 10px 5px;
+  border-radius: 4px;
+}
+.adde-by{
+  background: rgb(6, 110, 2);
+  color: white;
+  padding: 0 5px;
+}
+.search{
+  background-color: yellow;
+  padding: 10px 5px;
+  border-radius: 5px;
+}
+.search-bg{
+  background-color: aquamarine;
+  padding: 4px 10px;
+}
+.search-container{
+  background-color: beige;
+}
+.box{
+  margin: 5px 5px;
+}
