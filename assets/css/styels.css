@@ -50,75 +50,90 @@ h1 {
   display: flex;
   justify-content: space-between;
 }
-.bg-header{
+.bg-header {
   background-color: rgb(65, 75, 71);
   border-radius: 5px;
   padding: 8px 2px;
   color: aliceblue;
 }
-.rmain{
+.rmain {
   color: rgb(207, 0, 0);
   font-weight: bolder;
 }
-.change-container{
+.change-container {
   background-color: darkgray;
   border-radius: 5px;
 }
-.change-container-header{
+.change-container-header {
   background-color: bisque;
   padding: 15px 2px;
   border-radius: 5px;
   margin-bottom: 5px;
 }
-.stageinfo{
+.stageinfo {
   background-color: rgb(150, 160, 5);
-  padding-left:5px ;
+  padding-left: 5px;
 }
-.stage-name{
+.stage-name {
   color: rgb(255, 124, 124);
   background-color: rgb(47, 75, 17);
   width: 100%;
   padding: 3px 20px;
   border-radius: 10px 0 10px 0;
 }
-.stage-valu{
+.stage-valu {
   color: aqua;
   background-color: rgb(27, 44, 10);
   width: 100%;
   padding: 3px 20px;
   border-radius: 10px 0 10px 0;
 }
-.time-head{
+.time-head {
   background-color: rgb(17, 11, 12);
   padding: 4px 10px;
   color: rgb(9, 184, 190);
 }
-.edit-header{
+.edit-header {
   font-weight: bolder;
   color: rgb(128, 2, 65);
 }
-.edit-content{
+.edit-content {
   background-color: bisque;
   padding: 10px 5px;
   border-radius: 4px;
 }
-.adde-by{
+.adde-by {
   background: rgb(6, 110, 2);
   color: white;
   padding: 0 5px;
 }
-.search{
+.search {
   background-color: yellow;
   padding: 10px 5px;
   border-radius: 5px;
 }
-.search-bg{
+.search-bg {
   background-color: aquamarine;
   padding: 4px 10px;
 }
-.search-container{
+.search-container {
   background-color: beige;
 }
-.box{
+.box {
   margin: 5px 5px;
+}
+.comand-box {
+  background-color: aquamarine;
+  margin-bottom: 5px;
+}
+.text-end {
+  color: rgb(1, 8, 15);
+  text-align: right;
+  font-size: 40px;
+}
+.text-ends {
+  color: rgb(1, 8, 15);
+  background-color: azure;
+  text-align: right;
+  padding-right: 5px;
 }

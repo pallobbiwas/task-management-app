@@ -29,6 +29,10 @@ export const mutations = {
   deleteProjects(state, id) {
     state.projects.splice(id, 1)
   },
+  clearActiveUser(state){
+    state.activeUser = {}
+    console.log('in');
+  }
   /* searchbyname(state, name) {
     let singlevalue = state.projects.filter((p) => p.name == name)
     state.searchresult.push(singlevalue)

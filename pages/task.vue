@@ -470,7 +470,11 @@
           </div>
           <div class="py time-head">Last update : {{ duration }}</div>
           <div class="py">
-            <div class="px-15" v-for="(e, i) in detailsArray.comand" :key="i">
+            <div
+              class="px-15 comand-box"
+              v-for="(e, i) in detailsArray.comand"
+              :key="i"
+            >
               <v-row>
                 <v-col md="2">
                   <v-avatar color="red">
@@ -479,16 +483,50 @@
                     }}</span>
                   </v-avatar>
                 </v-col>
-                <v-col md="5">
+                <v-col md="10">
                   <div class="d-flex time-head">
                     <v-icon class="pink white--text"> mdi-timer </v-icon>
                     <h4 class="ms-2">{{ e.time }}</h4>
                   </div>
-                  <h3>Coments</h3>
-                  <hr />
-                  <p>
+                  <h3>
+                    Comment by
+                    <span class="pink px-4 white--text">{{
+                      e.comandName
+                    }}</span>
+                  </h3>
+                  <p class="ms-5">
                     {{ e.comandDes }}
                   </p>
+                  <!-- post -->
+                  <div class="text-end">
+                    <button @click="replyBox">...</button>
+                    <div v-if="openTextField" class="text-container">
+                      <v-text-field
+                        v-model="replytext"
+                        label="Write your reply"
+                      ></v-text-field>
+                      <div>
+                        <v-btn @click="createReply(e)">Post</v-btn>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- reply -->
+
+                  <div v-for="(p, i) in e.reply" :key="i" class="text-ends">
+                    <div class="d-flex time-head">
+                      <v-icon class="pink white--text"> mdi-timer </v-icon>
+                      <h4 class="ms-2">{{ p.time }}</h4>
+                    </div>
+                    <h3>
+                      Comment by
+                      <span class="pink px-4 white--text">{{
+                        p.postername
+                      }}</span>
+                    </h3>
+                    <p class="ms-5">
+                      {{ p.posts }}
+                    </p>
+                  </div>
                 </v-col>
               </v-row>
             </div>
@@ -636,6 +674,8 @@ export default {
       searchAray: [],
       rules: [(v) => v.length <= 25 || 'Max 25 characters'],
       adddescription: '',
+      replytext: '',
+      openTextField: false,
     }
   },
   mounted() {
@@ -776,14 +816,27 @@ export default {
     },
   },
   methods: {
+    replyBox() {
+      this.openTextField = true
+    },
+    createReply(e) {
+      let postText = {
+        posts: this.replytext,
+        postername: e.comandName,
+        time: new Date().toISOString().substr(0, 10),
+      }
+      e.reply.push(postText)
+      this.openTextField = false
+    },
     addDescrition(item) {
       let comadDetails = {
         comandDes: this.adddescription,
         comandName: item.asignto,
         time: new Date().toISOString().substr(0, 10),
+        reply: [],
       }
       item.comand.push(comadDetails)
-      this.adddescription = ""
+      this.adddescription = ''
     },
     openDialog(item) {
       this.dialog = !this.dialog
